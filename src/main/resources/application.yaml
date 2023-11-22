@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/iv4n89/service-films-config.git
+          default-label: main
+          username: iv4n89
+          password: ${secrets.GITHUB_TOKEN}
+
+server:
+  port: 8888
